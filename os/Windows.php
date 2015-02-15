@@ -13,7 +13,11 @@
 
 	class Windows implements InfoInterface
 	{
-		/** @return string */
+		/**
+		 * Gets the name of the Operating System
+		 *
+		 * @return string
+		 */
 		public static function getOS()
 		{
 			$wmi = Windows::getInstance();
@@ -35,5 +39,19 @@
 			}
 
 			return $wmi;
+		}
+
+		/**
+		 * @return string
+		 */
+		public static function getKernelVersion()
+		{
+			$wmi = Windows::getInstance();
+
+			foreach ($wmi->ExecQuery("SELECT WindowsVersion FROM Win32_Process WHERE Handle = 0") as $process) {
+				return $process->WindowsVersion;
+			}
+
+			return "Unknown";
 		}
 	}

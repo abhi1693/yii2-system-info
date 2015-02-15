@@ -15,6 +15,15 @@
 	 */
 	interface InfoInterface
 	{
-		/** @return string */
+		/**
+		 * Gets the name of the Operating System
+		 *
+		 * @return string
+		 */
 		public static function getOS();
+
+		/**
+		 * @return string
+		 */
+		public static function getKernelVersion();
 	}
