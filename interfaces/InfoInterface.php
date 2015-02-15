@@ -16,5 +16,5 @@
 	interface InfoInterface
 	{
 		/** @return string */
-		public static function getHostname();
+		public static function getOS();
 	}
