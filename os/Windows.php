@@ -144,4 +144,33 @@
 
 			return round(array_sum($load) / count($load), 2) . "%";
 		}
+
+		/**
+		 * Gets Processor's Architecture
+		 *
+		 * @return string
+		 */
+		public static function getCpuArchitecture()
+		{
+			$wmi = Windows::getInstance();
+
+			foreach ($wmi->ExecQuery("SELECT Architecture FROM Win32_Processor") as $cpu) {
+				switch ($cpu->Architecture) {
+					case 0:
+						return "x86";
+					case 1:
+						return "MIPS";
+					case 2:
+						return "Alpha";
+					case 3:
+						return "PowerPC";
+					case 6:
+						return "Itanium-based systems";
+					case 9:
+						return "x64";
+				}
+			}
+
+			return "Unknown";
+		}
 	}

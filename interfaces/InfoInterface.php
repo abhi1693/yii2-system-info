@@ -58,6 +58,13 @@
 		public static function getCpuFreq();
 
 		/**
+		 * Gets Processor's Architecture
+		 *
+		 * @return string
+		 */
+		public static function getCpuArchitecture();
+
+		/**
 		 * Gets current system load
 		 *
 		 * @return string

@@ -19,6 +19,7 @@ provides you with appropriate information.
 - getCpuModel
 - getCpuVendor
 - getCpuFreq
+- getCpuArchitecture
 - getLoad
 
 ## Installation
