@@ -21,6 +21,8 @@
 
 			if (strpos($name, 'windows') !== FALSE) {
 				return __NAMESPACE__ . '\os\Windows';
+			} elseif (strpos($name, 'linux') !== FALSE) {
+				return __NAMESPACE__ . '\os\Linux';
 			}
 
 			return NULL;
