@@ -56,27 +56,78 @@
 		 */
 		public static function getCpuModel()
 		{
-			$cpuInfo = '/proc/cpuinfo';
+			Linux::getCpuInfo()['Model'];
+		}
+
+		private static function getCpuInfo()
+		{
+			// File that has it
+			$file = '/proc/cpuinfo';
 
 			// Not there?
-			if (!is_file($cpuInfo) || !is_readable($cpuInfo)) {
+			if (!is_file($file) || !is_readable($file)) {
 				return 'Unknown';
 			}
 
-			if ($cpuInfo) {
-				$cpuInfo = explode("\n", $cpuInfo);
-				$values  = [];
-				foreach ($cpuInfo as $v) {
-					$v = array_map("trim", explode(':', $v));
-					if (isset($v[0]) && isset($v[1])) {
-						$values[$v[0]] = $v[1];
-					}
+			/*
+			 * Get all info for all CPUs from the cpuinfo file
+			 */
+
+			// Get contents
+			$contents = trim(@file_get_contents($file));
+
+			// Lines
+			$lines = explode("\n", $contents);
+
+			// Holder for current CPU info
+			$cur_cpu = [];
+
+			// Go through lines in file
+			$num_lines = count($lines);
+
+			// We use the key of the first line to separate CPUs
+			$first_line = substr($lines[0], 0, strpos($lines[0], ' '));
+
+			for ($i = 0; $i < $num_lines; $i++) {
+				// Info here
+				$line = explode(':', $lines[$i], 2);
+
+				if (!array_key_exists(1, $line))
+					continue;
+
+				$key   = trim($line[0]);
+				$value = trim($line[1]);
+
+
+				// What we want are MHZ, Vendor, and Model.
+				switch ($key) {
+
+					// CPU model
+					case 'model name':
+					case 'cpu':
+					case 'Processor':
+						$cur_cpu['Model'] = $value;
+						break;
+
+					// Speed in MHz
+					case 'cpu MHz':
+						$cur_cpu['MHz'] = $value;
+						break;
+
+					case 'Cpu0ClkTck': // Old sun boxes
+						$cur_cpu['MHz'] = hexdec($value) / 1000000;
+						break;
+
+					// Brand/vendor
+					case 'vendor_id':
+						$cur_cpu['Vendor'] = $value;
+						break;
 				}
 
-				return 'model name' ? (isset($values['model name']) ? $values['model name'] : NULL) : $values;
 			}
 
-			return 'Unknown';
+			// Return them
+			return $cur_cpu;
 		}
 
 		/**
@@ -86,27 +137,7 @@
 		 */
 		public static function getCpuVendor()
 		{
-			$cpuInfo = '/proc/cpuinfo';
-
-			// Not there?
-			if (!is_file($cpuInfo) || !is_readable($cpuInfo)) {
-				return 'Unknown';
-			}
-
-			if ($cpuInfo) {
-				$cpuInfo = explode("\n", $cpuInfo);
-				$values  = [];
-				foreach ($cpuInfo as $v) {
-					$v = array_map("trim", explode(':', $v));
-					if (isset($v[0]) && isset($v[1])) {
-						$values[$v[0]] = $v[1];
-					}
-				}
-
-				return 'vendor_id' ? (isset($values['vendor_id']) ? $values['vendor_id'] : NULL) : $values;
-			}
-
-			return 'Unknown';
+			Linux::getCpuInfo()['Vendor'];
 		}
 
 		/**
@@ -116,27 +147,7 @@
 		 */
 		public static function getCpuFreq()
 		{
-			$cpuInfo = '/proc/cpuinfo';
-
-			// Not there?
-			if (!is_file($cpuInfo) || !is_readable($cpuInfo)) {
-				return 'Unknown';
-			}
-
-			if ($cpuInfo) {
-				$cpuInfo = explode("\n", $cpuInfo);
-				$values  = [];
-				foreach ($cpuInfo as $v) {
-					$v = array_map("trim", explode(':', $v));
-					if (isset($v[0]) && isset($v[1])) {
-						$values[$v[0]] = $v[1];
-					}
-				}
-
-				return 'cpu MHZ' ? (isset($values['cpu MHZ']) ? $values['cpu MHZ'] : NULL) : $values;
-			}
-
-			return 'Unknown';
+			Linux::getCpuInfo()['MHz'];
 		}
 
 		/**
