@@ -35,4 +35,25 @@
 		 * @return string
 		 */
 		public static function getHostname();
+
+		/**
+		 * Gets Processor's Model
+		 *
+		 * @return string
+		 */
+		public static function getCpuModel();
+
+		/**
+		 * Gets Processor's Vendor
+		 *
+		 * @return string
+		 */
+		public static function getCpuVendor();
+
+		/**
+		 * Gets Processor's Frequency
+		 *
+		 * @return string
+		 */
+		public static function getCpuFreq();
 	}

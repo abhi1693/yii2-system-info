@@ -13,7 +13,12 @@ provides you with appropriate information.
 
 ## Methods
 
+- getOS
+- getKernelVersion
 - getHostname
+- getCpuModel
+- getCpuVendor
+- getCpuFreq
 
 ## Installation
 

@@ -73,4 +73,58 @@
 
 			return "Unknown";
 		}
+
+		/**
+		 * Gets Processor's Model
+		 *
+		 * @return string
+		 */
+		public static function getCpuModel()
+		{
+			$wmi = Windows::getInstance();
+
+			$object = $wmi->ExecQuery("SELECT Name FROM Win32_Processor");
+
+			foreach ($object as $cpu) {
+				return $cpu->Name;
+			}
+
+			return 'Unknown';
+		}
+
+		/**
+		 * Gets Processor's Vendor
+		 *
+		 * @return string
+		 */
+		public static function getCpuVendor()
+		{
+			$wmi = Windows::getInstance();
+
+			$object = $wmi->ExecQuery("SELECT Manufacturer FROM Win32_Processor");
+
+			foreach ($object as $cpu) {
+				return $cpu->Manufacturer;
+			}
+
+			return 'Unknown';
+		}
+
+		/**
+		 * Gets Processor's Frequency
+		 *
+		 * @return string
+		 */
+		public static function getCpuFreq()
+		{
+			$wmi = Windows::getInstance();
+
+			$object = $wmi->ExecQuery("SELECT CurrentClockSpeed FROM Win32_Processor");
+
+			foreach ($object as $cpu) {
+				return $cpu->CurrentClockSpeed;
+			}
+
+			return 'Unknown';
+		}
 	}
