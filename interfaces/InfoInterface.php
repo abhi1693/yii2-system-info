@@ -56,4 +56,11 @@
 		 * @return string
 		 */
 		public static function getCpuFreq();
+
+		/**
+		 * Gets current system load
+		 *
+		 * @return string
+		 */
+		public static function getLoad();
 	}

@@ -127,4 +127,21 @@
 
 			return 'Unknown';
 		}
+
+		/**
+		 * Gets current system load
+		 *
+		 * @return string
+		 */
+		public static function getLoad()
+		{
+			$wmi  = Windows::getInstance();
+			$load = [];
+
+			foreach ($wmi->ExecQuery("SELECT LoadPercentage FROM Win32_Processor") as $cpu) {
+				$load[] = $cpu->LoadPercentage;
+			}
+
+			return round(array_sum($load) / count($load), 2) . "%";
+		}
 	}
