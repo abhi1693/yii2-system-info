@@ -1,6 +1,7 @@
 System/Server Information Helper
 --------------------------------
 
+[![Build Status](https://travis-ci.org/abhi1693/system-info.svg)](https://travis-ci.org/abhi1693/system-info)
 [![Code Climate](https://codeclimate.com/github/abhi1693/system-info/badges/gpa.svg)](https://codeclimate.com/github/abhi1693/system-info)
 [![Latest Stable Version](https://poser.pugx.org/abhi1693/system-info/v/stable.svg)](https://packagist.org/packages/abhi1693/system-info) [![Total Downloads](https://poser.pugx.org/abhi1693/system-info/downloads.svg)](https://packagist.org/packages/abhi1693/system-info) [![Latest Unstable Version](https://poser.pugx.org/abhi1693/system-info/v/unstable.svg)](https://packagist.org/packages/abhi1693/system-info) [![License](https://poser.pugx.org/abhi1693/system-info/license.svg)](https://packagist.org/packages/abhi1693/system-info)
 
