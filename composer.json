@@ -1,0 +1,19 @@
+{
+  "name": "abhi1693/system-info",
+  "description": "Information about the server",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Abhimanyu Saharan",
+      "email": "abhimanyu@teamvulcans.com"
+    }
+  ],
+
+  "require": {
+    "php": ">=5.4.0"
+  },
+
+  "autoload": {
+    "psr-4": { "abhimanyu\\system-info\\": "" }
+  }
+}
