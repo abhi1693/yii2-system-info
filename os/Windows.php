@@ -42,6 +42,8 @@
 		}
 
 		/**
+		 * Gets the Kernel Version of the Operating System
+		 *
 		 * @return string
 		 */
 		public static function getKernelVersion()
@@ -50,6 +52,23 @@
 
 			foreach ($wmi->ExecQuery("SELECT WindowsVersion FROM Win32_Process WHERE Handle = 0") as $process) {
 				return $process->WindowsVersion;
+			}
+
+			return "Unknown";
+		}
+
+
+		/**
+		 * Gets the hostname
+		 *
+		 * @return string
+		 */
+		public static function getHostname()
+		{
+			$wmi = Windows::getInstance();
+
+			foreach ($wmi->ExecQuery("SELECT Name FROM Win32_ComputerSystem") as $cs) {
+				return $cs->Name;
 			}
 
 			return "Unknown";

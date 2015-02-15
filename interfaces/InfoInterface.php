@@ -23,7 +23,16 @@
 		public static function getOS();
 
 		/**
+		 * Gets the Kernel Version of the Operating System
+		 *
 		 * @return string
 		 */
 		public static function getKernelVersion();
+
+		/**
+		 * Gets the hostname
+		 *
+		 * @return string
+		 */
+		public static function getHostname();
 	}
