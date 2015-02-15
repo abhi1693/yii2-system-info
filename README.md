@@ -39,3 +39,7 @@ $system = SystemInfo::getInfo();
 // Captain Obvious was here
 $system::getHostname();
 ```
+
+## Contribution
+
+Contributing instructions are located in [CONTRIBUTING.md](CONTRIBUTING.md) file.
