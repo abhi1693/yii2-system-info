@@ -154,7 +154,7 @@
 		 */
 		public static function getCpuArchitecture()
 		{
-			return php_uname('m');
+			return php_uname('m') == 'i686' ? '32-Bit Kernel' : '64-Bit Kernel';
 		}
 
 		/**
@@ -164,6 +164,6 @@
 		 */
 		public static function getLoad()
 		{
-			// TODO: Implement getLoad() method.
+
 		}
 	}
