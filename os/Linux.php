@@ -85,9 +85,6 @@
 			// Go through lines in file
 			$num_lines = count($lines);
 
-			// We use the key of the first line to separate CPUs
-			$first_line = substr($lines[0], 0, strpos($lines[0], ' '));
-
 			for ($i = 0; $i < $num_lines; $i++) {
 				// Info here
 				$line = explode(':', $lines[$i], 2);
