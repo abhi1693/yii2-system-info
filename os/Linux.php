@@ -201,4 +201,14 @@
 		{
 			return phpversion();
 		}
+
+		/**
+		 * Gets Server Name
+		 *
+		 * @return string
+		 */
+		public static function getServerName()
+		{
+			return strpos(strtolower($_SERVER['SERVER_NAME']), 'apache') !== FALSE;
+		}
 	}

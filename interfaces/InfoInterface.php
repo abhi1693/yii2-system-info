@@ -91,4 +91,11 @@
 		 * @return string
 		 */
 		public static function getPhpVersion();
+
+		/**
+		 * Gets Server Name
+		 *
+		 * @return string
+		 */
+		public static function getServerName();
 	}
