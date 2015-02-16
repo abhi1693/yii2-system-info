@@ -154,7 +154,7 @@
 		 */
 		public static function getCpuArchitecture()
 		{
-			return php_uname('m') == 'i686' ? '32-Bit Kernel' : '64-Bit Kernel';
+			return shell_exec('getconf LONG_BIT') . 'Bit Kernel';
 		}
 
 		/**
