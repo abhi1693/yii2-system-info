@@ -173,4 +173,31 @@
 
 			return "Unknown";
 		}
+
+		/**
+		 * Gets system up-time
+		 *
+		 * @return string
+		 */
+		public static function getUpTime()
+		{
+			$wmi = Windows::getInstance();
+
+			$booted_str = '';
+			foreach ($wmi->ExecQuery("SELECT LastBootUpTime FROM Win32_OperatingSystem") as $os) {
+				$booted_str = $os->LastBootUpTime;
+			}
+
+			$booted    = [
+				'year'   => substr($booted_str, 0, 4),
+				'month'  => substr($booted_str, 4, 2),
+				'day'    => substr($booted_str, 6, 2),
+				'hour'   => substr($booted_str, 8, 2),
+				'minute' => substr($booted_str, 10, 2),
+				'second' => substr($booted_str, 12, 2)
+			];
+			$booted_ts = mktime($booted['hour'], $booted['minute'], $booted['second'], $booted['month'], $booted['day'], $booted['year']);
+
+			return date('m/d/y h:i A (T)', $booted_ts);
+		}
 	}
