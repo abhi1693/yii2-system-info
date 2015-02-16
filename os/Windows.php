@@ -200,4 +200,22 @@
 
 			return date('m/d/y h:i A (T)', $booted_ts);
 		}
+
+		/**
+		 * Gets total number of cores
+		 *
+		 * @return integer
+		 */
+		public static function getCpuCores()
+		{
+			$wmi    = Windows::getInstance();
+			$object = $wmi->ExecQuery("SELECT NumberOfLogicalProcessors FROM Win32_Processor");
+
+			$cores = 0;
+			foreach ($object as $obj) {
+				$cores = $obj->NumberOfLogicalProcessors;
+			}
+
+			return $cores;
+		}
 	}
