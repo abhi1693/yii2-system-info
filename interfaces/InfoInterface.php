@@ -65,6 +65,13 @@
 		public static function getCpuArchitecture();
 
 		/**
+		 * Gets total number of cores
+		 *
+		 * @return integer
+		 */
+		public static function getCpuCores();
+
+		/**
 		 * Gets current system load
 		 *
 		 * @return string
