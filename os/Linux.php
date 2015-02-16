@@ -119,6 +119,11 @@
 					case 'vendor_id':
 						$cur_cpu['Vendor'] = $value;
 						break;
+
+					// CPU Cores
+					case 'cpu cores':
+						$cur_cpu['Cores'] = $value;
+						break;
 				}
 
 			}
@@ -175,5 +180,15 @@
 		public static function getUpTime()
 		{
 			return shell_exec('uptime -p');
+		}
+
+		/**
+		 * Gets total number of cores
+		 *
+		 * @return integer
+		 */
+		public static function getCpuCores()
+		{
+			return Linux::getCpuInfo()['Cores'];
 		}
 	}
