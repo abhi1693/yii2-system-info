@@ -24,6 +24,7 @@ provides you with appropriate information.
 - getCpuArchitecture
 - getLoad
 - getUpTime
+- getPhpVersion
 
 ## Installation
 
