@@ -22,6 +22,7 @@ provides you with appropriate information.
 - getCpuFreq
 - getCpuArchitecture
 - getLoad
+- getUpTime
 
 ## Installation
 
