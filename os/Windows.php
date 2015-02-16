@@ -236,7 +236,7 @@
 		 */
 		public static function getServerName()
 		{
-			return $_SERVER['SERVER_SOFTWARE'];
+			return $_SERVER['SERVER_NAME'];
 		}
 
 		/**
@@ -247,5 +247,15 @@
 		public static function getServerProtocol()
 		{
 			return $_SERVER['SERVER_PROTOCOL'];
+		}
+
+		/**
+		 * Gets the type of server e.g. apache
+		 *
+		 * @return string
+		 */
+		public static function getServerSoftware()
+		{
+			return $_SERVER['SERVER_SOFTWARE'];
 		}
 	}

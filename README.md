@@ -28,6 +28,7 @@ provides you with appropriate information.
 - getPhpVersion
 - getServerName
 - getServerProtocol
+- getServerSoftware
 
 ## Installation
 

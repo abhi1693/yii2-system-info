@@ -105,4 +105,11 @@
 		 * @return string
 		 */
 		public static function getServerProtocol();
+
+		/**
+		 * Gets the type of server e.g. apache
+		 *
+		 * @return string
+		 */
+		public static function getServerSoftware();
 	}
