@@ -211,4 +211,14 @@
 		{
 			return $_SERVER['SERVER_SOFTWARE'];
 		}
+
+		/**
+		 * Gets Server Protocol
+		 *
+		 * @return string
+		 */
+		public static function getServerProtocol()
+		{
+			return $_SERVER['SERVER_PROTOCOL'];
+		}
 	}

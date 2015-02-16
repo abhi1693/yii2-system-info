@@ -98,4 +98,11 @@
 		 * @return string
 		 */
 		public static function getServerName();
+
+		/**
+		 * Gets Server Protocol
+		 *
+		 * @return string
+		 */
+		public static function getServerProtocol();
 	}

@@ -27,6 +27,7 @@ provides you with appropriate information.
 - getUpTime
 - getPhpVersion
 - getServerName
+- getServerProtocol
 
 ## Installation
 
