@@ -10,6 +10,7 @@ provides you with appropriate information.
 ## Supported OS
 
 - Windows
+- Linux
 
 ## Methods
 
