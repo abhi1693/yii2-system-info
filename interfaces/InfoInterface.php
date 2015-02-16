@@ -84,4 +84,11 @@
 		 * @return string
 		 */
 		public static function getUpTime();
+
+		/**
+		 * Gets Current PHP Version
+		 *
+		 * @return string
+		 */
+		public static function getPhpVersion();
 	}

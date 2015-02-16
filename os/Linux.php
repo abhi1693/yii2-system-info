@@ -191,4 +191,14 @@
 		{
 			return Linux::getCpuInfo()['Cores'];
 		}
+
+		/**
+		 * Gets Current PHP Version
+		 *
+		 * @return string
+		 */
+		public static function getPhpVersion()
+		{
+			return phpversion();
+		}
 	}
