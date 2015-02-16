@@ -154,7 +154,7 @@
 		 */
 		public static function getCpuArchitecture()
 		{
-			return shell_exec('getconf LONG_BIT') . 'Bit Kernel';
+			return shell_exec('getconf LONG_BIT') . 'Bit';
 		}
 
 		/**
@@ -164,6 +164,15 @@
 		 */
 		public static function getLoad()
 		{
+			$file     = '/proc/loadavg';
+			$contents = trim(file_get_contents($file));
 
+			if ($contents === FALSE) {
+				return 'Unknown';
+			}
+
+			$parts = explode(' ', $contents);
+
+			return round((($parts[0] + $parts[1] + $parts[2]) / 3) * 100, 1) . '%';
 		}
 	}
