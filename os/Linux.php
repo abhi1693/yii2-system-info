@@ -209,6 +209,6 @@
 		 */
 		public static function getServerName()
 		{
-			return strpos(strtolower($_SERVER['SERVER_NAME']), 'apache') !== FALSE;
+			return strpos(strtolower($_SERVER['SERVER_SOFTWARE']), 'apache') !== FALSE;
 		}
 	}
