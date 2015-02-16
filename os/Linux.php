@@ -56,7 +56,7 @@
 		 */
 		public static function getCpuModel()
 		{
-			Linux::getCpuInfo()['Model'];
+			return Linux::getCpuInfo()['Model'];
 		}
 
 		private static function getCpuInfo()
@@ -137,7 +137,7 @@
 		 */
 		public static function getCpuVendor()
 		{
-			Linux::getCpuInfo()['Vendor'];
+			return Linux::getCpuInfo()['Vendor'];
 		}
 
 		/**
@@ -147,7 +147,7 @@
 		 */
 		public static function getCpuFreq()
 		{
-			Linux::getCpuInfo()['MHz'];
+			return Linux::getCpuInfo()['MHz'];
 		}
 
 		/**
