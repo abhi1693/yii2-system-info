@@ -70,4 +70,11 @@
 		 * @return string
 		 */
 		public static function getLoad();
+
+		/**
+		 * Gets system up-time
+		 *
+		 * @return string
+		 */
+		public static function getUpTime();
 	}

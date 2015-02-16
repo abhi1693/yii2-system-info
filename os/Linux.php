@@ -166,4 +166,14 @@
 		{
 			return round(array_sum(sys_getloadavg()) / count(sys_getloadavg()), 2);
 		}
+
+		/**
+		 * Gets system up-time
+		 *
+		 * @return string
+		 */
+		public static function getUpTime()
+		{
+			return shell_exec('uptime -p');
+		}
 	}
