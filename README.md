@@ -22,6 +22,7 @@ provides you with appropriate information.
 - getCpuVendor
 - getCpuFreq
 - getCpuArchitecture
+- getCpuCores
 - getLoad
 - getUpTime
 
