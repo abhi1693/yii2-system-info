@@ -1,6 +1,7 @@
 System/Server Information Helper
 --------------------------------
 
+[![Dependency Status](https://www.versioneye.com/user/projects/54e1d8640a910b25de000184/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54e1d8640a910b25de000184)
 [![Code Climate](https://codeclimate.com/github/abhi1693/system-info/badges/gpa.svg)](https://codeclimate.com/github/abhi1693/system-info)
 [![Latest Stable Version](https://poser.pugx.org/abhi1693/system-info/v/stable.svg)](https://packagist.org/packages/abhi1693/system-info) [![Total Downloads](https://poser.pugx.org/abhi1693/system-info/downloads.svg)](https://packagist.org/packages/abhi1693/system-info) [![Latest Unstable Version](https://poser.pugx.org/abhi1693/system-info/v/unstable.svg)](https://packagist.org/packages/abhi1693/system-info) [![License](https://poser.pugx.org/abhi1693/system-info/license.svg)](https://packagist.org/packages/abhi1693/system-info)
 
