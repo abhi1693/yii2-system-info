@@ -158,21 +158,12 @@
 		}
 
 		/**
-		 * Gets current system load
+		 * Gets system average load
 		 *
 		 * @return string
 		 */
 		public static function getLoad()
 		{
-			$file     = '/proc/loadavg';
-			$contents = trim(file_get_contents($file));
-
-			if ($contents === FALSE) {
-				return 'Unknown';
-			}
-
-			$parts = explode(' ', $contents);
-
-			return round((($parts[0] + $parts[1] + $parts[2]) / 3) / ($parts[0] + $parts[1] + $parts[2]) * 100, 1) . '%';
+			return round(array_sum(sys_getloadavg()) / count(sys_getloadavg()), 2);
 		}
 	}
