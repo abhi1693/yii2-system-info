@@ -119,4 +119,18 @@
 		 * @return array|null
 		 */
 		public static function getTotalMemory();
+
+		/**
+		 * Gets the current DB Type of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbType();
+
+		/**
+		 * * Gets the current DB Version of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbVersion();
 	}

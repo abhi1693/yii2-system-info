@@ -10,6 +10,8 @@
 
 	use abhimanyu\systemInfo\interfaces\InfoInterface;
 	use Exception;
+	use PDO;
+	use Yii;
 
 	class Windows implements InfoInterface
 	{
@@ -273,5 +275,25 @@
 			}
 
 			return NULL;
+		}
+
+		/**
+		 * Gets the current DB Type of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbType()
+		{
+			return Yii::$app->db->driverName;
+		}
+
+		/**
+		 * * Gets the current DB Version of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbVersion()
+		{
+			return Yii::$app->db->pdo->getAttribute(PDO::ATTR_SERVER_VERSION);
 		}
 	}
