@@ -231,4 +231,20 @@
 		{
 			return $_SERVER['SERVER_SOFTWARE'];
 		}
+
+		/**
+		 * Gets total physical memory
+		 *
+		 * @return array|null
+		 */
+		public static function getTotalMemory()
+		{
+			// todo
+		}
+
+		private static function getMemoryInfo()
+		{
+			$data = @explode("\n", file_get_contents("/proc/meminfo"));
+
+		}
 	}

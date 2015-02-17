@@ -112,4 +112,11 @@
 		 * @return string
 		 */
 		public static function getServerSoftware();
+
+		/**
+		 * Gets total physical memory
+		 *
+		 * @return array|null
+		 */
+		public static function getTotalMemory();
 	}

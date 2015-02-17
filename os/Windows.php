@@ -258,4 +258,20 @@
 		{
 			return $_SERVER['SERVER_SOFTWARE'];
 		}
+
+		/**
+		 * Gets total physical memory
+		 *
+		 * @return array|null
+		 */
+		public static function getTotalMemory()
+		{
+			$wmi = Windows::getInstance();
+
+			foreach ($wmi->ExecQuery("SELECT TotalPhysicalMemory FROM Win32_ComputerSystem") as $mem) {
+				return $mem->TotalPhysicalMemory;
+			}
+
+			return NULL;
+		}
 	}

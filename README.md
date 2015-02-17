@@ -1,9 +1,9 @@
 System/Server Information Helper
 --------------------------------
 
-[![Dependency Status](https://www.versioneye.com/user/projects/54e1d8640a910b25de000184/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54e1d8640a910b25de000184)
-[![Code Climate](https://codeclimate.com/github/abhi1693/system-info/badges/gpa.svg)](https://codeclimate.com/github/abhi1693/system-info)
-[![Latest Stable Version](https://poser.pugx.org/abhi1693/system-info/v/stable.svg)](https://packagist.org/packages/abhi1693/system-info) [![Total Downloads](https://poser.pugx.org/abhi1693/system-info/downloads.svg)](https://packagist.org/packages/abhi1693/system-info) [![Latest Unstable Version](https://poser.pugx.org/abhi1693/system-info/v/unstable.svg)](https://packagist.org/packages/abhi1693/system-info) [![License](https://poser.pugx.org/abhi1693/system-info/license.svg)](https://packagist.org/packages/abhi1693/system-info)
+[![Dependency Status](https://www.versioneye.com/user/projects/54e337edd1ec573c99000042/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54e337edd1ec573c99000042)
+[![Code Climate](https://codeclimate.com/github/abhi1693/yii2-system-info/badges/gpa.svg)](https://codeclimate.com/github/abhi1693/yii2-system-info)
+[![Latest Stable Version](https://poser.pugx.org/abhi1693/yii2-system-info/v/stable.svg)](https://packagist.org/packages/abhi1693/yii2-system-info) [![Total Downloads](https://poser.pugx.org/abhi1693/yii2-system-info/downloads.svg)](https://packagist.org/packages/abhi1693/yii2-system-info) [![Latest Unstable Version](https://poser.pugx.org/abhi1693/yii2-system-info/v/unstable.svg)](https://packagist.org/packages/abhi1693/yii2-system-info) [![License](https://poser.pugx.org/abhi1693/yii2-system-info/license.svg)](https://packagist.org/packages/abhi1693/yii2-system-info)
 
 Provides information about your system/server. It automatically detects the type of system that you are using and 
 provides you with appropriate information.
@@ -29,6 +29,7 @@ provides you with appropriate information.
 - getServerName
 - getServerProtocol
 - getServerSoftware
+- getTotalMemory
 
 ## Installation
 
@@ -37,7 +38,7 @@ Add System-Info to the require section of your **composer.json** file:
 ```php
 {
     "require": {
-        "abhi1693/system-info": "1.0.0"
+        "abhi1693/yii2-system-info": "1.0.0"
     }
 }
 ```
