@@ -10,6 +10,7 @@
 
 	use abhimanyu\systemInfo\interfaces\InfoInterface;
 	use Exception;
+	use Yii;
 
 	class Linux implements InfoInterface
 	{
@@ -240,6 +241,26 @@
 		public static function getTotalMemory()
 		{
 			// todo
+		}
+
+		/**
+		 * Gets the current DB Type of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbType()
+		{
+			return Yii::$app->db->driverName;
+		}
+
+		/**
+		 * * Gets the current DB Version of Yii2
+		 *
+		 * @return mixed
+		 */
+		public static function getDbVersion()
+		{
+			return Yii::$app->db->pdo->getAttribute(PDO::ATTR_SERVER_VERSION);
 		}
 
 		private static function getMemoryInfo()
