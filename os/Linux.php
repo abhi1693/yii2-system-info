@@ -10,6 +10,7 @@
 
 	use abhimanyu\systemInfo\interfaces\InfoInterface;
 	use Exception;
+	use PDO;
 	use Yii;
 
 	class Linux implements InfoInterface
