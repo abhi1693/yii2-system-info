@@ -37,7 +37,7 @@ Add System-Info to the require section of your **composer.json** file:
 ```php
 {
     "require": {
-        "abhi1693/system-info": "1.0.0"
+        "abhi1693/yii2-system-info": "1.0.0"
     }
 }
 ```
