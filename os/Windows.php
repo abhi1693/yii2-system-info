@@ -294,6 +294,13 @@
 		 */
 		public static function getDbVersion()
 		{
+			try {
+				// Open Connection if closed
+				Yii::$app->db->open();
+			} catch (Exception $e) {
+				//ignore
+			}
+
 			return Yii::$app->db->pdo->getAttribute(PDO::ATTR_SERVER_VERSION);
 		}
 	}
