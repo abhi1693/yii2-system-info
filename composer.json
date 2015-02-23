@@ -5,7 +5,8 @@
   "authors": [
     {
       "name": "Abhimanyu Saharan",
-      "email": "abhimanyu@teamvulcans.com"
+      "email": "abhimanyu@teamvulcans.com",
+      "homepage": "http://abhi1693.github.io/yii2-system-info"
     }
   ],
   "require": {
