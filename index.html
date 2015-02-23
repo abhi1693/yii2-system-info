@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Yii2 System Info by abhi1693</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Yii2 System Info</h1>
+        <h2>Information about the server based on Yii2</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/abhi1693/yii2-system-info/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/abhi1693/yii2-system-info/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/abhi1693/yii2-system-info" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h2>
+<a id="systemserver-information-helper" class="anchor" href="#systemserver-information-helper" aria-hidden="true"><span class="octicon octicon-link"></span></a>System/Server Information Helper</h2>
+
+<p>Provides information about your system/server. It automatically detects the type of system that you are using and 
+provides you with appropriate information.</p>
+
+<h2>
+<a id="supported-os" class="anchor" href="#supported-os" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported OS</h2>
+
+<ul>
+<li>Windows</li>
+<li>Linux</li>
+</ul>
+
+<h2>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h2>
+
+<ul>
+<li>getOS</li>
+<li>getKernelVersion</li>
+<li>getHostname</li>
+<li>getCpuModel</li>
+<li>getCpuVendor</li>
+<li>getCpuFreq</li>
+<li>getCpuArchitecture</li>
+<li>getCpuCores</li>
+<li>getLoad</li>
+<li>getUpTime</li>
+<li>getPhpVersion</li>
+<li>getServerName</li>
+<li>getServerProtocol</li>
+<li>getServerSoftware</li>
+<li>getTotalMemory</li>
+</ul>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add System-Info to the require section of your <strong>composer.json</strong> file:</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2">{</span>
+<span class="pl-s2">    <span class="pl-s1"><span class="pl-pds">"</span>require<span class="pl-pds">"</span></span>: {</span>
+<span class="pl-s2">        <span class="pl-s1"><span class="pl-pds">"</span>abhi1693/yii2-system-info<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">"</span>1.0.0<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">    }</span>
+<span class="pl-s2">}</span></pre></div>
+
+<p>And run following command to download extension using <strong>composer</strong>:</p>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2">$ <span class="pl-c1">php</span> <span class="pl-c1">composer</span><span class="pl-k">.</span><span class="pl-c1">phar</span> <span class="pl-c1">update</span></span></pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-c">// Get the class to work with the current operating system</span></span>
+<span class="pl-s2"><span class="pl-vo">$system</span> <span class="pl-k">=</span> <span class="pl-s3">SystemInfo</span><span class="pl-k">::</span>getInfo();</span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-c">// Captain Obvious was here</span></span>
+<span class="pl-s2"><span class="pl-vo">$system</span><span class="pl-k">::</span>getHostname();</span></pre></div>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
