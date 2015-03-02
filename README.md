@@ -59,6 +59,19 @@ $system = SystemInfo::getInfo();
 $system::getHostname();
 ```
 
+## FAQ
+
+#### `COM` not found
+
+From `PHP 5.4.5`, `COM` is no longer built into the php core. You have to add `COM` support in `php.ini`:
+
+```php
+[COM_DOT_NET] 
+extension=php_com_dotnet.dll 
+```
+
+Otherwise you will see this in your error log: `Fatal error: Class \'COM\' not found`
+
 ## Contribution
 
 Contributing instructions are located in [CONTRIBUTING.md](CONTRIBUTING.md) file.
