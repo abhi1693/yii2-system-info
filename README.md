@@ -7,6 +7,13 @@ System/Server Information Helper
 
 Provides information about your system/server. It automatically detects the type of system that you are using and 
 provides you with appropriate information.
+
+DONATE
+------
+
+Any contribution helps us to improve [Yii2 System Info](https://github.com/abhi1693/yii2-system-info), if you want to help us too but don't want to get into coding, we won't say no to PayPal
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4M2CDMWD7W3MS)
  
 ## Supported OS
 
