@@ -41,12 +41,18 @@ Any contribution helps us to improve [Yii2 System Info](https://github.com/abhi1
 
 ## Installation
 
+Either run
+
+```bash
+$ php composer.phar require abhi1693/yii2-system-info "@dev"
+```
+
 Add System-Info to the require section of your **composer.json** file:
 
 ```php
 {
     "require": {
-        "abhi1693/yii2-system-info": "1.0.0"
+        "abhi1693/yii2-system-info": "@dev"
     }
 }
 ```
@@ -60,6 +66,8 @@ $ php composer.phar update
 ## Usage
 
 ```php
+use abhimanyu\systemInfo\SystemInfo;
+
 // Get the class to work with the current operating system
 $system = SystemInfo::getInfo();
 
